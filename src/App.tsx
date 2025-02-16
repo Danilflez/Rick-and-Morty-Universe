@@ -10,7 +10,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   return (
-    <Router>
+    <Router  basename="/Rick-and-Morty-Universe">
       <div className="App">
       <Header onSearch={setSearchTerm} />
         <ImageBar />
