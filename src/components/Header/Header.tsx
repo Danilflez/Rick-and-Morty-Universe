@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent } from 'react';
 import s from './Header.module.scss';
 import Navbar from '../Navbar/Navbar';
+import logo from '../../../public/Logo.png'
 
 interface HeaderProps {
     onSearch: (searchTerm: string) => void;
@@ -19,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
     return (
         <div className={s.header}>
             <div className={s.logo}>
-                <img src='./Logo.png' alt="Rick and Morty Logo" style={{ height: '50px' }} />
+                <img src={logo} alt="Rick and Morty Logo" style={{ height: '50px' }} />
             </div>
             <div className={s.searchContainer}>
                 <input
