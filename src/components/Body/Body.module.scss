@@ -1,0 +1,83 @@
+.body {
+    width: 100%;
+    min-height: 600px;
+    height: auto;
+    background-color: #2a313f;
+  
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 1em;
+}
+
+.pagination {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+}
+
+.pagination span {
+    font-family: 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: bold;
+}
+
+.btnPagination {
+    height: 40px;
+    font-family: 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: solid #FF8800;
+    background-color: #4b494700;
+    font-weight: bold;
+    
+
+}
+
+.btnPagination:hover {
+    background-color: #FF8800;
+    color: #ffffff;
+}
+.emptyState {
+    text-align: center;
+    padding: 40px 20px;
+    width: 100%;
+    
+    h2 {
+      color: #FF8800;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      color:#FF8800;
+      font-size: 16px;
+    }
+  }
+  
+
+
+@media (max-width:1828px) {
+    .cardGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:1160px) {
+    .cardGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:348px) {}

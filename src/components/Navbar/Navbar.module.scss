@@ -1,0 +1,22 @@
+.navItem a {
+    font-family:  'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    text-decoration: none;
+    color: #333; /* Цвет текста */
+    padding: 8px 16px; /* Отступы вокруг текста */
+    border-radius: 10px; /* Радиус скругления углов */
+    border: solid #FF8800;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.navItem a:hover {
+    background-color: #FF8800; /* Изменение фона при наведении */
+    color: #ffffff;
+}
+
+@media (max-width:469px) {
+    .navItem a {
+       
+    
+  }
+}
