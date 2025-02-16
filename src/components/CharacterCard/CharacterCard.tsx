@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import s from './CharacterCard.module.scss';
-
+import imageActive from '../../../public/activStatus.png'
+import imageDisable from '../../../public/disableStatus.png'
 // Добавим интерфейс для уведомления
 interface Notification {
   message: string;
@@ -94,9 +95,9 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ character, removeFromFavo
       <div className={s.actions}>
         <button className={s.favoriteBtn} onClick={toggleFavorite}>
           {favorited ? (
-            <img src="/image-Photoroom.png" alt="Remove from favorites" className={s.favoritImage}/>
+            <img src={imageActive} alt="imageActive" className={s.favoritImage}/>
           ) : (
-            <img src="/image-Photoroom 1.png" alt="Add to favorites" className={s.favoritImage}/>
+            <img src={imageDisable} alt="Add to favorites" className={s.favoritImage}/>
           )}
         </button>
       </div>
