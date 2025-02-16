@@ -11,12 +11,20 @@
   <body>
     <div id="root"></div>
 
+    <script>
+      (function() {
+        if (!sessionStorage.redirect) {
+          sessionStorage.redirect = window.location.href;
+          window.location.href = '/Rick-and-Morty-Universe/index.html';
+        }
+      })();
+    </script>
 
     <script>
       (function() {
         var redirect = sessionStorage.redirect;
         delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
+        if (redirect && redirect !== window.location.href) {
           history.replaceState(null, null, redirect);
         }
       })();
