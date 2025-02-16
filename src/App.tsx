@@ -18,9 +18,7 @@ function App() {
         <Route path="/" element={<Body searchTerm={searchTerm} />} />
           <Route path="/characters/:id" element={<CharacterDetail />} />
           {/* <Route path="/" element={showFavorites ? <FavoritesPage /> : <Body />} /> */}
-          <Route 
-            path="/favorites" 
-            element={<FavoritesPage searchTerm={searchTerm} />} 
+          <Route path="/favorites" element={<FavoritesPage searchTerm={searchTerm} />} 
           />
         </Routes>
       </div>

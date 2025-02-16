@@ -6,7 +6,7 @@ interface NavbarProps {
 }
 
 const menuItems: { title: string; link: string }[] = [
-    { title: 'Favorites', link: '/favorites' },
+    { title: 'Favorites', link: '/Rick-and-Morty-Universe/favorites' },
     
 ];
 
