@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Импортируем Link
 import s from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -6,8 +7,7 @@ interface NavbarProps {
 }
 
 const menuItems: { title: string; link: string }[] = [
-    { title: 'Favorites', link: '/Rick-and-Morty-Universe/favorites' },
-    
+    { title: 'Favorites', link: '/favorites' }, // Убедитесь, что путь соответствует вашему basename
 ];
 
 const Navbar: React.FC<NavbarProps> = ({ items }) => {
@@ -15,13 +15,11 @@ const Navbar: React.FC<NavbarProps> = ({ items }) => {
 
     return (
         <div className={s.navbar}>
-            
-                {combinedItems.map((item, index) => (
-                    <a key={index} className={s.navItem}>
-                        <a href={item.link}>{item.title}</a>
-                    </a>
-                ))}
-            
+            {combinedItems.map((item, index) => (
+                <div key={index} className={s.navItem}>
+                    <Link to={item.link}>{item.title}</Link>
+                </div>
+            ))}
         </div>
     );
 }

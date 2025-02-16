@@ -74,7 +74,6 @@ const CharacterCard: React.FC<CharacterCardProps> = ({ character, removeFromFavo
 
   return (
     <div className={s.card}>
-      {/* Уведомление */}
       {notification && (
         <div className={`${s.notification} ${s[notification.type]}`}>
           {notification.message}
